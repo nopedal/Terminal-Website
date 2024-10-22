@@ -1,5 +1,6 @@
 # Terminal Website
  
-# this was built with a tutorial, to learn cmds with JS.
+![image](https://github.com/user-attachments/assets/dc64c8a7-4cdf-4717-9996-901400504772)
 
-test at, https://terminal-website-two.vercel.app/
+
+# LIVE PREVIEW: https://terminal-website-two.vercel.app/
