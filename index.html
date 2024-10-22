@@ -16,20 +16,21 @@
         </div>
         <div class="ascii-art">
             <pre>
-                Welcome to My Terminal
-                __          ________ ____   _____ _____ _______ ______ 
-                \ \        / /  ____|  _ \ / ____|_   _|__   __|  ____|
-                 \ \  /\  / /| |__  | |_) | (___   | |    | |  | |__   
-                  \ \/  \/ / |  __| |  _ < \___ \  | |    | |  |  __|  
-                   \  /\  /  | |____| |_) |____) |_| |_   | |  | |____ 
-                    \/  \/   |______|____/|_____/|_____|  |_|  |______|  
-
-                    Type <span style="color:yellow">help</span> to view available commands  </pre>
-            
-            <div class="output">
-            </div>
+                Welcome to Nikolas Terminal
+                ___  ____  _____ ____    _    _     
+                / _ \|  _ \| ____|  _ \  / \  | |    
+               | | | | |_) |  _| | | | |/ _ \ | |    
+               | |_| |  __/| |___| |_| / ___ \| |___ 
+                \___/|_|   |_____|____/_/   \_\_____|                                   
+                Type <span style="color:yellow">help</span> to view available commands
+            </pre>
         </div>
+        
+        <!-- Scrollable terminal body -->
         <div class="terminal-body">
+            <div class="output"></div> <!-- The terminal output goes here -->
+            
+            <!-- Keep the command-line input at the bottom -->
             <div class="command-line">
                 <span> nikolas@project.com:~$ </span>
                 <input type="text" id="userInput" autocomplete="off" autofocus>

@@ -1,3 +1,4 @@
+/* General styles */
 body {
     background-color: #2b2b2b;
     color: #f0f0f0;
@@ -10,8 +11,8 @@ body {
 }
 
 .terminal-window {
-    width: 900px; /* Increased width */
-    height: 700px; /* Increased height */
+    width: 900px;
+    height: 700px;
     background-color: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
@@ -37,15 +38,11 @@ body {
 .yellow { background-color: #ffbd2e; }
 .green { background-color: #28ca42; }
 
-
 .ascii-art {
     background-color: #1e1e1e;
     padding: 13px;
     font-family: 'Courier New', Courier, monospace;
     white-space: pre;
-    animation: dropDown 1s ease forwards;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-50px); /* Start position above */
 }
 
 .ascii-art pre {
@@ -53,30 +50,30 @@ body {
     font-size: 15px;
 }
 
-@keyframes dropDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Scrollable terminal body */
 .terminal-body {
     padding: 16px;
     flex: 1;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Make this scrollable */
 }
 
-.command-line {
-    background-color: transparent;
+.output {
+    flex: 1; /* Allow output to grow and fill available space */
+    margin-top: 10px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* Command-line input stays at the bottom */
+.command-line {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    font-size: 16px;
 }
 
 .command-line span {
@@ -91,15 +88,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     outline: none;
-    width: calc(100% - 20px); /* Adjusted width */
-}
-
-.output {
-    margin-top: 10px;
-    white-space: pre-wrap;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    color: #ffffff;
+    flex: 1; /* Input field grows to take full width */
 }
 
 .animate-drop {
@@ -118,10 +107,3 @@ body {
         transform: translateY(0);
     }
 }
-
-.help-text-container {
-    margin-right: 50px;
-    margin-top: 10px
-}
-
-
