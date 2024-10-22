@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="" type="image/x-icon">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="button red"></div>
+            <div class="button yellow"></div>
+            <div class="button green"></div>
+        </div>
+        <div class="ascii-art">
+            <pre>
+                Welcome to My Terminal
+                __          ________ ____   _____ _____ _______ ______ 
+                \ \        / /  ____|  _ \ / ____|_   _|__   __|  ____|
+                 \ \  /\  / /| |__  | |_) | (___   | |    | |  | |__   
+                  \ \/  \/ / |  __| |  _ < \___ \  | |    | |  |  __|  
+                   \  /\  /  | |____| |_) |____) |_| |_   | |  | |____ 
+                    \/  \/   |______|____/|_____/|_____|  |_|  |______|  
+
+                    Type <span style="color:yellow">help</span> to view available commands  </pre>
+            
+            <div class="output">
+            </div>
+        </div>
+        <div class="terminal-body">
+            <div class="command-line">
+                <span> nikolas@project.com:~$ </span>
+                <input type="text" id="userInput" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

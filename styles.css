@@ -1,0 +1,127 @@
+body {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal-window {
+    width: 900px; /* Increased width */
+    height: 700px; /* Increased height */
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #3b3b3b;
+    padding: 8px;
+    display: flex;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red { background-color: #ff5f57; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #28ca42; }
+
+
+.ascii-art {
+    background-color: #1e1e1e;
+    padding: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    animation: dropDown 1s ease forwards;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-50px); /* Start position above */
+}
+
+.ascii-art pre {
+    color: #00d7a7;
+    font-size: 15px;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.terminal-body {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.command-line {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.command-line span {
+    color: #00d7a7;
+}
+
+.command-line input {
+    background-color: transparent;
+    caret-color: rgb(0, 207, 145);
+    border: none;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    outline: none;
+    width: calc(100% - 20px); /* Adjusted width */
+}
+
+.output {
+    margin-top: 10px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.animate-drop {
+    animation: dropDown 0.5s ease forwards;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start position above */
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.help-text-container {
+    margin-right: 50px;
+    margin-top: 10px
+}
+
+
